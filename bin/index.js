@@ -8,11 +8,20 @@ fetch(`https://www.hebcal.com/shabbat?cfg=json&zip=${zip}&m=50&&a=off`)
 .then(r => {
     // console.log(r)
     // need to adjust for holiday
-    let date = r['date'].substr(0,10)
-    let location = r['location']['title']
-    let start = r['items'][0]['title']
-    let end = r['items'][r['items'].length - 1]['title']
-    let parasha = r['items'][2]['title']
+
+    let date;
+    let title; 
+
+    r.items.forEach(item => {
+        if(item[0].title_orig == "Candle lighting"){
+            date = item.date
+            title = item.title
+
+        }
+    })
+    console.log(date)
+    console.log(title)
+
 
     // console.log(`Location: ${location}`)
     // console.log(`Weekend: ${date}`)
