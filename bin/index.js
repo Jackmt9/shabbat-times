@@ -7,7 +7,7 @@ fetch(`https://www.hebcal.com/shabbat?cfg=json&zip=${zip}&m=50&&a=off`)
 .then(r => r.json())
 .then(r => {
     // console.log(r)
-    // need to adjust for holidays
+    // need to adjust for holiday
     let date = r['date'].substr(0,10)
     let location = r['location']['title']
     let start = r['items'][0]['title']
