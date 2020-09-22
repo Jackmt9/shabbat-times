@@ -14,12 +14,12 @@ fetch(`https://www.hebcal.com/shabbat?cfg=json&zip=${zip}&m=50&&a=off`)
     let end = r['items'][r['items'].length - 1]['title']
     let parasha = r['items'][2]['title']
 
-    console.log(`Location: ${location}`)
-    console.log(`Weekend: ${date}`)
-    console.log(`--------------------`)
-    console.log(parasha)
-    console.log(start)
-    console.log(end)
+    // console.log(`Location: ${location}`)
+    // console.log(`Weekend: ${date}`)
+    // console.log(`--------------------`)
+    // console.log(parasha)
+    // console.log(start)
+    // console.log(end)
 })
 .catch(function() {
     console.log("Invalid ZIP code, please try again.");
