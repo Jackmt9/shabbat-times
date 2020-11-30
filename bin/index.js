@@ -2,12 +2,11 @@
 const fetch = require("node-fetch");
 let arg = require('yargs').parse()['_']
 let zip = arg.join('')
+// https://github.com/yargs/yargs
 
 fetch(`https://www.hebcal.com/shabbat?cfg=json&zip=${zip}&m=50&&a=off`)
 .then(r => r.json())
 .then(r => {
-    // console.log(r)
-    // need to adjust for holiday
 
     let date;
     let title; 
