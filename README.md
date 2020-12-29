@@ -1,5 +1,7 @@
 # Shabbat Times
 
+* API currently not linked properly * 
+
 Run ```npm install``` to install all dependencies.
 
 Run ```npm install -g .``` to install application globally.
